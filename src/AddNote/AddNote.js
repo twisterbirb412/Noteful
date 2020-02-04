@@ -1,6 +1,7 @@
 import React from 'react';
 import config from '../config';
 import ApiContext from '../ApiContext';
+import ValidationError from '../ValidationError/ValidationError';
 
 const Required = () => (
     <span className='AddBookmark__required'>*</span>
@@ -17,8 +18,15 @@ export default class AddNote extends React.Component {
     }
     state = {
         error: null,
+        name: {
+            touched: false,
+            value: '',
+        }
     }
 
+    updateName (name) {
+        this.setState({ name: { value: name, touched: true } });
+    }
 
     //need a handleSubmit function
     handleSubmit(e) {
@@ -68,10 +76,21 @@ export default class AddNote extends React.Component {
         this.props.history.push('/')
       };
     
+    validateNoteName() {
+        const name = this.state.name.value.trim();
+
+        if (name.length === 0 ) {
+            return "Name is required";
+        } else if (name.length < 3) {
+            return "Name must be at least 3 characters long";
+        }
+    }
+
 
     render () {
         const { error } = this.state
         const { folders } = this.context
+        const nameError = this.validateNoteName();
 
         return (
             <section className="AddNote">
@@ -93,10 +112,11 @@ export default class AddNote extends React.Component {
                             name="noteName"
                             id="noteName"
                             placeholder="New Note"
-                            ref={this.nameInput}
+                            onChange={e => this.updateName(e.target.value)}
                             required
                         />
                         <Required />
+                        {this.state.name.touched && <ValidationError message={nameError} />}
                      </div>
                      <div>
                          <label htmlFor="noteContent">
@@ -136,7 +156,10 @@ export default class AddNote extends React.Component {
                             Cancel
                         </button>
                         {' '}
-                        <button type='submit'>
+                        <button 
+                            type='submit'
+                            disabled = {this.validateNoteName()}
+                            >
                          Save
                         </button>
                     </div>
