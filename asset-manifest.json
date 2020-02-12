@@ -1,16 +1,16 @@
 {
   "main.css": "/Noteful/static/css/main.1d41306f.chunk.css",
-  "main.js": "/Noteful/static/js/main.f30d9a94.chunk.js",
-  "main.js.map": "/Noteful/static/js/main.f30d9a94.chunk.js.map",
+  "main.js": "/Noteful/static/js/main.94d1290d.chunk.js",
+  "main.js.map": "/Noteful/static/js/main.94d1290d.chunk.js.map",
   "static/css/1.49b45934.chunk.css": "/Noteful/static/css/1.49b45934.chunk.css",
   "static/js/1.5e981e5f.chunk.js": "/Noteful/static/js/1.5e981e5f.chunk.js",
   "static/js/1.5e981e5f.chunk.js.map": "/Noteful/static/js/1.5e981e5f.chunk.js.map",
   "runtime~main.js": "/Noteful/static/js/runtime~main.f3202d80.js",
   "runtime~main.js.map": "/Noteful/static/js/runtime~main.f3202d80.js.map",
-  "static/media/index.css": "/Noteful/static/media/roboto-latin-900italic.bc833e72.woff",
-  "static/css/1.49b45934.chunk.css.map": "/Noteful/static/css/1.49b45934.chunk.css.map",
+  "static/media/index.css": "/Noteful/static/media/roboto-latin-700.cf6613d1.woff",
   "static/css/main.1d41306f.chunk.css.map": "/Noteful/static/css/main.1d41306f.chunk.css.map",
+  "static/css/1.49b45934.chunk.css.map": "/Noteful/static/css/1.49b45934.chunk.css.map",
   "index.html": "/Noteful/index.html",
-  "precache-manifest.cece30da7a3a34b94a34690da7c731a0.js": "/Noteful/precache-manifest.cece30da7a3a34b94a34690da7c731a0.js",
+  "precache-manifest.f621616501e2cded13faed01f4d8d3fd.js": "/Noteful/precache-manifest.f621616501e2cded13faed01f4d8d3fd.js",
   "service-worker.js": "/Noteful/service-worker.js"
 }
